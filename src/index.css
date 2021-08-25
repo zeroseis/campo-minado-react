@@ -7,12 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* MINE-FIELD */
+
 .mine-field {
   display: grid;
   border: 1px solid #000;
   grid-template-columns: repeat(3, 150px);
   grid-template-rows: repeat(3, 150px);
 }
+
+/* SPOT-AREA */
 
 .spot-area {
   border: 1px solid #000;
@@ -30,5 +34,27 @@ body {
 }
 
 .spot-area.-revealed.-mine::before {
+  background-color: red;
+}
+
+/* SCORE-BOARD */
+
+.score-board {
+  display: flex;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.score-board .score {
+  padding: .5rem 1rem;
+  border-radius: .3rem;
+  color: white;
+}
+
+.score-board .score.-clear {
+  background-color: green;
+}
+
+.score-board .score.-exploded {
   background-color: red;
 }
